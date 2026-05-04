@@ -7,6 +7,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
+import { Switch } from "../ui/switch";
+import { Button } from "../ui/button";
 
 export default function Navbar() {
   return (
@@ -16,11 +18,11 @@ export default function Navbar() {
 
       {/* items */}
 
-      <NavigationMenu >
-        <NavigationMenuList className="flex gap-4" >
+      <NavigationMenu>
+        <NavigationMenuList className="flex gap-4">
           {/* news*/}
-          <NavigationMenuItem >
-            <NavigationMenuLink  href="/news">News</NavigationMenuLink>
+          <NavigationMenuItem>
+            <NavigationMenuLink href="/news">News</NavigationMenuLink>
           </NavigationMenuItem>
           {/* services */}
           <NavigationMenuItem>
@@ -42,10 +44,13 @@ export default function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* login */}
-      <div className="flex">
-        <h1>Theme</h1>
-      <h1>Login</h1>
+      {/* login and dark mode */}
+      <div className="flex gap-4 justify-center">
+        <div className="flex gap-2 items-center">
+          <span>Dark Mode</span>
+          <Switch />
+        </div>
+        <Button className="cursor-pointer" variant="default">Button</Button>
       </div>
     </header>
   );
