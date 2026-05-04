@@ -13,13 +13,13 @@ import { Menu } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="flex justify-between items-center px-4 shadow-md my-2">
+    <header className="flex justify-between items-center px-4 shadow-md my-4">
       {/* logo */}
       <Link href="/">Daily News</Link>
 
       {/* items */}
 
-      <NavigationMenu className="hidden lg:flex">
+      <NavigationMenu className="hidden  lg:flex">
         <NavigationMenuList className="flex gap-4">
           {/* news*/}
           <NavigationMenuItem>
@@ -46,14 +46,18 @@ export default function Navbar() {
       </NavigationMenu>
 
       {/* login and dark mode */}
-      <div className="flex gap-4 justify-center hidden lg:flex">
+      <div className=" gap-4 justify-center hidden lg:flex">
         <div className="flex gap-2 items-center">
           <span>Dark Mode</span>
           <Switch />
         </div>
-        <Button className="cursor-pointer" variant="default">Button</Button>
+        <Button className="cursor-pointer" variant="default">
+          Login
+        </Button>
       </div>
-      <Button className="lg:hidden"><Menu size={24} /></Button>
+      <Button className="lg:hidden">
+        <Menu size={24} />
+      </Button>
     </header>
   );
 }
