@@ -32,6 +32,7 @@ export default function Navbar() {
               <NavigationMenuLink>Web Development</NavigationMenuLink>
               <NavigationMenuLink>Mobile Apps</NavigationMenuLink>
               <NavigationMenuLink>Graphic Design</NavigationMenuLink>
+              <NavigationMenuLink>Seo</NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
           {/* about */}
@@ -46,7 +47,7 @@ export default function Navbar() {
       </NavigationMenu>
 
       {/* login and dark mode */}
-      <div className=" gap-4 justify-center hidden lg:flex">
+      <div className="gap-4 justify-center hidden lg:flex">
         <div className="flex gap-2 items-center">
           <span>Dark Mode</span>
           <Switch />
