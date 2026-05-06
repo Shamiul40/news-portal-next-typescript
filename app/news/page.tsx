@@ -3,7 +3,7 @@
 export default function NewsPage() {
   return (
     <div>
-      News page
+      <h1>Latest News</h1>
     </div>
   )
 }
