@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -10,8 +11,12 @@ import {
 import { Switch } from "../ui/switch";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+
+  const pathname = usePathname();
+
   return (
     <header className="flex justify-between items-center px-2 py-2 shadow-md  ">
       {/* logo */}
@@ -24,13 +29,13 @@ export default function Navbar() {
           {/* news*/}
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/news">News</Link>
+              <Link className={`${pathname==="/news" ? "text-red-500" : ""} hover:bg-transparent`} href="/news">News</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           {/* services */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>
-              <Link href="/services">Services</Link>
+              <Link className={`${pathname==="/services" ? "text-red-500" : ""} hover:bg-transparent`} href="/services">Services</Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <NavigationMenuLink asChild>Web Development</NavigationMenuLink>
@@ -42,13 +47,13 @@ export default function Navbar() {
           {/* about */}
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-          <Link href="/about">About</Link>
+          <Link className={`${pathname==="/about" ? "text-red-500" : ""} hover:bg-transparent`} href="/about">About</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           {/* contact */}
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/contact">Contact</Link>
+              <Link className={`${pathname==="/contact" ? "text-red-500" : ""} hover:bg-transparent`} href="/contact">Contact</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
