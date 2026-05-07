@@ -10,8 +10,9 @@ import {
 } from "../ui/navigation-menu";
 import { Switch } from "../ui/switch";
 import { Button } from "../ui/button";
-import { Menu } from "lucide-react";
+
 import { usePathname } from "next/navigation";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
 
@@ -69,9 +70,10 @@ export default function Navbar() {
           Login
         </Button>
       </div>
-      <Button className="lg:hidden">
-        <Menu size={24} />
-      </Button>
+       <MobileMenu />
+      
+       
+   
     </header>
   );
 }
