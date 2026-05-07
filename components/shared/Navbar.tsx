@@ -13,7 +13,7 @@ import { Menu } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="flex justify-between items-center px-4 shadow-md my-4">
+    <header className="flex justify-between items-center px-2 py-2 shadow-md  ">
       {/* logo */}
       <Link href="/">Daily News</Link>
 
@@ -23,25 +23,33 @@ export default function Navbar() {
         <NavigationMenuList className="flex gap-4">
           {/* news*/}
           <NavigationMenuItem>
-            <NavigationMenuLink href="/news">News</NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link href="/news">News</Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           {/* services */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+            <NavigationMenuTrigger>
+              <Link href="/services">Services</Link>
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <NavigationMenuLink>Web Development</NavigationMenuLink>
-              <NavigationMenuLink>Mobile Apps</NavigationMenuLink>
-              <NavigationMenuLink>Graphic Design</NavigationMenuLink>
-              <NavigationMenuLink>Seo</NavigationMenuLink>
+              <NavigationMenuLink asChild>Web Development</NavigationMenuLink>
+              <NavigationMenuLink asChild>Mobile Apps</NavigationMenuLink>
+              <NavigationMenuLink asChild>Graphic Design</NavigationMenuLink>
+              <NavigationMenuLink asChild>Seo</NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
           {/* about */}
           <NavigationMenuItem>
-            <NavigationMenuLink href="/about">About</NavigationMenuLink>
+            <NavigationMenuLink asChild>
+          <Link href="/about">About</Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           {/* contact */}
           <NavigationMenuItem>
-            <NavigationMenuLink href="/contact">Contact</NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link href="/contact">Contact</Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
