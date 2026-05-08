@@ -16,7 +16,7 @@ export default function Card({ news }: CardProps) {
       <div className="flex flex-col gap-2 px-4 py-2">
         {/* image */}
         <div>
-          <Link href={news.url} target="_blank">
+          <Link href= {`news/${news._id}`}target="_blank">
             <Image
               height={500}
               width={500}
@@ -28,9 +28,9 @@ export default function Card({ news }: CardProps) {
         </div>
         {/* content */}
         <div>
-          <h4 className="text-sm text-slate-600">{news.categories?.[0] || "News"}</h4>
-          <h1 className="text-2xl font-bold py-2">{news.title}</h1>
-          <p>{news.snippet}</p>
+          <h4 className="text-sm text-slate-600">{news.categories[0] || "news"}</h4>
+          <h1 className="text-xl font-bold py-2">{news.title.substring(0,55)}..</h1>
+          <p className="text-slate-500">{news.snippet.substring(0, 70)}..</p>
           <Button className="my-2 w-full">Read More...</Button>
         </div>
       </div>
