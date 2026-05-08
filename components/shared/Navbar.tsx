@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -15,7 +15,6 @@ import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
-
   const pathname = usePathname();
 
   return (
@@ -30,13 +29,23 @@ export default function Navbar() {
           {/* news*/}
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link className={`${pathname==="/news" ? "text-red-500" : ""} hover:bg-transparent`} href="/news">News</Link>
+              <Link
+                className={`${pathname === "/news" ? "text-red-500" : ""} hover:bg-transparent`}
+                href="/news"
+              >
+                News
+              </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           {/* services */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>
-              <Link className={`${pathname==="/services" ? "text-red-500" : ""} hover:bg-transparent`} href="/services">Services</Link>
+              <Link
+                className={`${pathname === "/services" ? "text-red-500" : ""} hover:bg-transparent`}
+                href="/services"
+              >
+                Services
+              </Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <NavigationMenuLink asChild>Web Development</NavigationMenuLink>
@@ -48,13 +57,23 @@ export default function Navbar() {
           {/* about */}
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-          <Link className={`${pathname==="/about" ? "text-red-500" : ""} hover:bg-transparent`} href="/about">About</Link>
+              <Link
+                className={`${pathname === "/about" ? "text-red-500" : ""} hover:bg-transparent`}
+                href="/about"
+              >
+                About
+              </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           {/* contact */}
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link className={`${pathname==="/contact" ? "text-red-500" : ""} hover:bg-transparent`} href="/contact">Contact</Link>
+              <Link
+                className={`${pathname === "/contact" ? "text-red-500" : ""} hover:bg-transparent`}
+                href="/contact"
+              >
+                Contact
+              </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
@@ -66,14 +85,11 @@ export default function Navbar() {
           <span>Dark Mode</span>
           <Switch />
         </div>
-        <Button className="cursor-pointer" variant="default">
+        <Button className="cursor-pointer" variant="outline">
           Login
         </Button>
       </div>
-       <MobileMenu />
-      
-       
-   
+      <MobileMenu />
     </header>
   );
 }

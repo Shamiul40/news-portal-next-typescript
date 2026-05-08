@@ -1,10 +1,7 @@
-
-
 export default function Home() {
   return (
-    <div>
-      Shamiul islam here
-      <p>this is a website</p>
+    <div className="py-12">
+      shamiul isla
     </div>
   );
 }

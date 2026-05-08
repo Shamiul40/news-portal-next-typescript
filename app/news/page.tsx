@@ -1,9 +1,10 @@
+import Banner from "@/components/shared/Banner";
 
 
 export default function NewsPage() {
   return (
     <div>
-      <h1>News</h1>
+      <Banner></Banner>
     </div>
-  )
+  );
 }
