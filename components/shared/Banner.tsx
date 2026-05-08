@@ -2,6 +2,7 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
+import bannerImg from "@/public/assets/roman-kraft-_Zua2hyvTBk-unsplash.jpg"
 
 export default function Banner() {
   return (
@@ -9,7 +10,7 @@ export default function Banner() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 px-4 py-2">
         {/* image */}
         <div>
-          <Image width={500} height={500} src='https://www.thedailystar.net/news/world/news/global-perceptions-us-fall-below-russia-under-trump-survey-finds-4170731' alt="banner Image" />
+          <Image src={bannerImg} alt="banner Image" />
         </div>
         {/* content */}
         <div>
