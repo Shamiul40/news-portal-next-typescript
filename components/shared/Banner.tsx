@@ -20,7 +20,7 @@ export default function Banner() {
             Global perceptions of US fall below Russia under Trump, survey finds
           </h1>
           <p>
-            Global perceptions of the US have deteriorated for a second
+            Global perceptions of the have deteriorated for a second
             consecutive year and are now worse than views of Russia, an annual
             study on ​democracy published on Friday showed, as US President
             Donald Trumps policies continue ‌to severely strain the NATO
