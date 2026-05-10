@@ -13,7 +13,7 @@ export async function GET(request: Request) {
   const data = await fs.readFile(filePath, 'utf-8');
   let news: NewsItem[] = JSON.parse(data);
 
-  // Filter by id
+  // ‍ Filter by id 
   if (id) {
     const item = news.find((n) => n._id === id);
     return NextResponse.json(item ? item : { error: 'Not found' }, { status: item ? 200 : 404 });
