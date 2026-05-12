@@ -21,7 +21,7 @@ export default function Banner() {
           </h1>
           <p>
             Global 
-            consecutive year and are now worse than views of Russia, an annual
+            consecut
             study on ​democracy published on Friday showed, as US President
             Donald Trumps policies continue ‌to severely strain the NATO
             alliance. Global perceptions of the US have deteriorated for a second
